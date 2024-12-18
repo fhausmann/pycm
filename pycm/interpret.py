@@ -1,7 +1,21 @@
 # -*- coding: utf-8 -*-
 """Interpretation functions."""
 
+from functools import wraps
+import numpy as np
 
+
+def check_na(function):
+    @wraps(function)
+    def decorated_function(value):
+        if value is None or value == "None" or np.isnan(value):
+            return "None"
+        return function(value)
+
+    return decorated_function
+
+
+@check_na
 def Q_analysis(Q):
     """
     Analysis Q(Yule's Q) with interpretation table.
@@ -22,6 +36,7 @@ def Q_analysis(Q):
         return "None"
 
 
+@check_na
 def MCC_analysis(MCC):
     """
     Analysis MCC(Matthews correlation coefficient) with interpretation table.
@@ -44,6 +59,7 @@ def MCC_analysis(MCC):
         return "None"
 
 
+@check_na
 def NLR_analysis(NLR):
     """
     Analysis NLR(Negative likelihood ratio) with interpretation table.
@@ -64,6 +80,7 @@ def NLR_analysis(NLR):
         return "None"
 
 
+@check_na
 def V_analysis(V):
     """
     Analysis Cramer's V with interpretation table.
@@ -88,6 +105,7 @@ def V_analysis(V):
         return "None"
 
 
+@check_na
 def PLR_analysis(PLR):
     """
     Analysis PLR(Positive likelihood ratio) with interpretation table.
@@ -108,6 +126,7 @@ def PLR_analysis(PLR):
         return "None"
 
 
+@check_na
 def DP_analysis(DP):
     """
     Analysis DP with interpretation table.
@@ -128,6 +147,7 @@ def DP_analysis(DP):
         return "None"
 
 
+@check_na
 def AUC_analysis(AUC):
     """
     Analysis AUC with interpretation table.
@@ -150,6 +170,7 @@ def AUC_analysis(AUC):
         return "None"
 
 
+@check_na
 def kappa_analysis_cicchetti(kappa):
     """
     Analysis kappa number with Cicchetti benchmark.
@@ -172,6 +193,7 @@ def kappa_analysis_cicchetti(kappa):
         return "None"
 
 
+@check_na
 def kappa_analysis_koch(kappa):
     """
     Analysis kappa number with Landis-Koch benchmark.
@@ -198,6 +220,7 @@ def kappa_analysis_koch(kappa):
         return "None"
 
 
+@check_na
 def kappa_analysis_fleiss(kappa):
     """
     Analysis kappa number with Fleiss benchmark.
@@ -216,6 +239,7 @@ def kappa_analysis_fleiss(kappa):
         return "None"
 
 
+@check_na
 def kappa_analysis_altman(kappa):
     """
     Analysis kappa number with Altman benchmark.
@@ -240,6 +264,7 @@ def kappa_analysis_altman(kappa):
         return "None"
 
 
+@check_na
 def lambda_analysis(lambda_):
     """
     Analysis of lambda (A or B) value with interpretation table.
@@ -266,6 +291,7 @@ def lambda_analysis(lambda_):
         return "None"
 
 
+@check_na
 def alpha_analysis(alpha):
     """
     Analysis of Krippendorff's alpha value with interpretation table.
@@ -286,6 +312,7 @@ def alpha_analysis(alpha):
         return "None"
 
 
+@check_na
 def pearson_C_analysis(pearson_C):
     """
     Analysis of Pearson's coefficient value with interpretation table.
