@@ -3,9 +3,10 @@
 <h1>PyCM: Python Confusion Matrix</h1>
 <br/>
 <a href="https://www.python.org/"><img src="https://img.shields.io/badge/built%20with-Python3-green.svg" alt="built with Python3"></a>
+<a href="https://github.com/sepandhaghighi/pycm"><img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/sepandhaghighi/pycm"></a>
 <a href="/Document"><img src="https://img.shields.io/badge/doc-latest-orange.svg"></a>
 <a href="https://codecov.io/gh/sepandhaghighi/pycm"><img src="https://codecov.io/gh/sepandhaghighi/pycm/branch/master/graph/badge.svg"></a>
-<a href="https://badge.fury.io/py/pycm"><img src="https://badge.fury.io/py/pycm.svg" alt="PyPI version" height="18"></a>
+<a href="https://badge.fury.io/py/pycm"><img src="https://badge.fury.io/py/pycm.svg" alt="PyPI version"></a>
 <a href="https://anaconda.org/sepandhaghighi/pycm"><img src="https://anaconda.org/sepandhaghighi/pycm/badges/version.svg"></a>
 <a href="https://colab.research.google.com/github/sepandhaghighi/pycm/blob/master"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Document"></a>
 <a href="https://discord.com/invite/zqpU2b3J3f"><img src="https://img.shields.io/discord/901883546162065408.svg" alt="Discord Channel"></a>
@@ -31,7 +32,7 @@ PyCM is the swiss-army knife of confusion matrices, targeted mainly at data scie
 	</tr>
 	<tr>
 		<td align="center">PyPI Counter</td>
-		<td align="center"><a href="http://pepy.tech/project/pycm"><img src="http://pepy.tech/badge/pycm"></a></td>
+		<td align="center"><a href="https://pepy.tech/projects/pycm"><img src="https://static.pepy.tech/badge/pycm" alt="PyPI Downloads"></a></td>
 	</tr>
 	<tr>
 		<td align="center">Github Stars</td>
@@ -75,10 +76,10 @@ PyCM is the swiss-army knife of confusion matrices, targeted mainly at data scie
 ### PyPI
 
 - Check [Python Packaging User Guide](https://packaging.python.org/installing/)
-- Run `pip install pycm==4.1`
+- Run `pip install pycm==4.2`
 
 ### Source code
-- Download [Version 4.1](https://github.com/sepandhaghighi/pycm/archive/v4.1.zip) or [Latest Source](https://github.com/sepandhaghighi/pycm/archive/dev.zip)
+- Download [Version 4.2](https://github.com/sepandhaghighi/pycm/archive/v4.2.zip) or [Latest Source](https://github.com/sepandhaghighi/pycm/archive/dev.zip)
 - Run `pip install .`
 
 ### Conda
